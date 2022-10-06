@@ -1,6 +1,5 @@
 region             = "eu-central-1"
 profile            = "personal-terraform"
-additional_tags    = {}
 vpc_cidr_block     = "10.0.0.0/16"
 enable_private_dns = true
 subnet_cidr_blocks = {

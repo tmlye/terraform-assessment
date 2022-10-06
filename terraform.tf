@@ -17,6 +17,10 @@ terraform {
       source  = "hashicorp/template"
       version = "~> 2.2"
     }
+    external = {
+      source  = "hashicorp/external"
+      version = "~> 2.2"
+    }
   }
   required_version = ">= 1.2"
 }

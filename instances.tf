@@ -50,3 +50,11 @@ resource "aws_security_group" "allow_vpc" {
     Name = "allow-icmp"
   }
 }
+
+data "external" "circular_ping" {
+  program = ["/bin/sh", "${path.module}/scripts/circular_ping.sh"]
+
+  query = {
+    ips = join(";", [for i in aws_instance.assessment : "${i.public_ip} ${i.private_ip}"])
+  }
+}
