@@ -47,7 +47,7 @@ resource "aws_security_group" "allow_vpc" {
   }
 
   tags = {
-    Name = "allow-icmp"
+    Name = "allow-vpc"
   }
 }
 

@@ -17,6 +17,11 @@ instances = {
     type = "t3.micro",
     ami  = "ami-05ff5eaef6149df49",
     az   = "eu-central-1b"
+  },
+  "2" = {
+    type = "t3.micro",
+    ami  = "ami-05ff5eaef6149df49",
+    az   = "eu-central-1b"
   }
 }
 ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9qncpXJ30tLfxHvGf0ArAXIKSCmBteqwycIxvWzxSDRjs5WTN5lexD2CIdNUgU0ojSTgrH4sidVY2kaDzFOPaDILx7sC1Q4ROIk6hMsWEdSgCOnar0IruSUQZe+ZZ9ZMzSzOzS1YAJrCzIAnGmAC6Zs3wG9KEeHyRT07zj52cb+M+KJFETJOcn6RVCp48CPFSCMBlWc57iUFafPjrys5NOg3XPSdmQbyKrm8v/31v6HsyImHz4uR3Cvd3W13ch2GoHDxMOrgZ6yq4Wx0ttvZVepBMXgLhsrSDHYQ62PFVsZ9ERRx8Qccs2RmVjCIUyPbjgfO/yNdGgCYA8QNizfFX se@saschaeglau.com"

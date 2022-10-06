@@ -26,7 +26,7 @@ for ((i = 0; i < $number_of_instances; ++i)); do
     if ssh -o "StrictHostKeyChecking=no" -i ~/.ssh/id_rsa.pub ec2-user@$this_public_ip ping -w 2 -c 1 $next_private_ip > /dev/null; then
         output+="\"${this_private_ip}_$next_private_ip\":\"success\","
     else
-        output+="\"${this_private_ip}_$next_private_ip\":\"failure\""
+        output+="\"${this_private_ip}_$next_private_ip\":\"failure\","
     fi
 done
 
