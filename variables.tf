@@ -33,3 +33,11 @@ variable "instances" {
     az   = string
   }))
 }
+
+variable "ssh_public_key" {
+  type = string
+}
+
+variable "home_ip" {
+  type = string
+}

@@ -46,6 +46,13 @@ resource "aws_default_network_acl" "main" {
   }
 }
 
+resource "aws_internet_gateway" "main" {
+  vpc_id = aws_vpc.main.id
+
+  tags = {
+    Name = "main"
+  }
+}
 
 resource "aws_subnet" "main" {
   for_each = var.subnet_cidr_blocks
@@ -77,4 +84,12 @@ resource "aws_route_table_association" "main" {
 
   subnet_id      = aws_subnet.main[each.key].id
   route_table_id = aws_route_table.main[each.key].id
+}
+
+resource "aws_route" "igw" {
+  for_each = var.subnet_cidr_blocks
+
+  route_table_id         = aws_route_table.main[each.key].id
+  destination_cidr_block = "0.0.0.0/0"
+  gateway_id             = aws_internet_gateway.main.id
 }
